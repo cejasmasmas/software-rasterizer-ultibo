@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="28"/>
+        <UsageCount Value="40"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="keyboardthread.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="KeyboardThread"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="11" Y="22"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo\core\framebuffer.pas"/>
+        <UnitName Value="Framebuffer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="2" Y="99"/>
+        <UsageCount Value="15"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo\core\vc4.pas"/>
+        <UnitName Value="VC4"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="321"/>
+        <CursorPos X="27" Y="343"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo\core\globalconst.pas"/>
+        <UnitName Value="GlobalConst"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="346"/>
+        <CursorPos X="28" Y="367"/>
+        <UsageCount Value="12"/>
+      </Unit4>
+    </Units>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="128" Column="87" TopLine="93"/>
+      </Position1>
+      <Position2>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="28"/>
+      </Position2>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
