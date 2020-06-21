@@ -154,7 +154,8 @@ void getScreenSize(unsigned long int *scrWidth, unsigned long int *scrHeight);
 
 int getScreenPitch(void);
 USHORT* getScreenBuffer(void);
-void getKey(int *value, int *down); 
+
+void getKey(int *value);  
 
 #ifdef __cplusplus
 }
@@ -163,7 +164,7 @@ void getKey(int *value, int *down);
 int PanelMouseX = 0;
 int PanelMouseY = 0;
 int ButtonsMouse = 0;
-int Key, KeyDown;
+int Key;
 
 
 
@@ -522,10 +523,11 @@ Reset_RENDERLIST4DV2(&rend_list);
 
 // modes and lights
 
+getKey(&Key);
 
 // wireframe mode
-/*
-if ( Key == 0x01 )//keyboard_state[DIK_W]) 
+
+if ( Key == 'w' )//keyboard_state[DIK_W]) 
    {
    // toggle wireframe mode
    if (++wireframe_mode > 1)
@@ -535,7 +537,7 @@ if ( Key == 0x01 )//keyboard_state[DIK_W])
    } // end if
 
 // backface removal
-if (keyboard_state[DIK_B])
+if (Key == 'b')//keyboard_state[DIK_B])
    {
    // toggle backface removal
    backface_mode = -backface_mode;
@@ -543,7 +545,7 @@ if (keyboard_state[DIK_B])
    } // end if
 
 // lighting
-if (keyboard_state[DIK_L])
+if (Key == 'l')//keyboard_state[DIK_L])
    {
    // toggle lighting engine completely
    lighting_mode = -lighting_mode;
@@ -551,7 +553,7 @@ if (keyboard_state[DIK_L])
    } // end if
 
 // toggle ambient light
-if (keyboard_state[DIK_A])
+if (Key == 'a')//keyboard_state[DIK_A])
    {
    // toggle ambient light
    if (lights2[AMBIENT_LIGHT_INDEX].state == LIGHTV2_STATE_ON)
@@ -563,7 +565,7 @@ if (keyboard_state[DIK_A])
    } // end if
 
 // toggle infinite light
-if (keyboard_state[DIK_I])
+if (Key == 'i')//keyboard_state[DIK_I])
    {
    // toggle ambient light
    if (lights2[INFINITE_LIGHT_INDEX].state == LIGHTV2_STATE_ON)
@@ -575,7 +577,7 @@ if (keyboard_state[DIK_I])
    } // end if
 
 // toggle point light
-if (keyboard_state[DIK_P])
+if ( Key == 'p')//keyboard_state[DIK_P])
    {
    // toggle point light
    if (lights2[POINT_LIGHT_INDEX].state == LIGHTV2_STATE_ON)
@@ -594,15 +596,16 @@ if (keyboard_state[DIK_P])
 
 
 // help menu
+/*
 if (keyboard_state[DIK_H])
    {
    // toggle help menu 
    help_mode = -help_mode;
    Wait_Clock(100); // wait, so keyboard doesn't bounce
    } // end if
-
+*/
 // z-sorting
-if (keyboard_state[DIK_Z])
+if ( Key == 'z')//keyboard_state[DIK_Z])
    {
    // toggle z sorting
    zsort_mode = -zsort_mode;
@@ -610,7 +613,7 @@ if (keyboard_state[DIK_Z])
    } // end if
 
 // next animation
-if (keyboard_state[DIK_2])
+if (Key == '2') //keyboard_state[DIK_2])
    {
    if (++obj_md2.anim_state >= NUM_MD2_ANIMATIONS)
       obj_md2.anim_state = 0;  
@@ -622,7 +625,7 @@ if (keyboard_state[DIK_2])
 
 
 // previous animation
-if (keyboard_state[DIK_1])
+if (Key == '1')//keyboard_state[DIK_1])
    {
    if (--obj_md2.anim_state < 0)
       obj_md2.anim_state = NUM_MD2_ANIMATIONS-1;  
@@ -633,7 +636,7 @@ if (keyboard_state[DIK_1])
    } // end if
 
 // replay animation
-if (keyboard_state[DIK_3])
+if (Key == '3') //keyboard_state[DIK_3])
    {
    Set_Animation_MD2(&obj_md2, obj_md2.anim_state, MD2_ANIM_SINGLE_SHOT);
    Wait_Clock(100); // wait, so keyboard doesn't bounce
@@ -641,44 +644,47 @@ if (keyboard_state[DIK_3])
 
 
 // replay animation
-if (keyboard_state[DIK_4])
+if ( Key == '4')//keyboard_state[DIK_4])
    {
    Set_Animation_MD2(&obj_md2, obj_md2.anim_state, MD2_ANIM_LOOP);
    Wait_Clock(100); // wait, so keyboard doesn't bounce
    } // end if
 
-
+if(Key == 0 )
+{
 // forward/backward
-if (keyboard_state[DIK_UP])
+ getKey(&Key);
+ 
+if ( Key == 0x48)//keyboard_state[DIK_UP])
    {
    // move forward
    if ( (cam_speed+=1) > MAX_SPEED) cam_speed = MAX_SPEED;
    } // end if
 else
-if (keyboard_state[DIK_DOWN])
+if ( Key == 0x50)//keyboard_state[DIK_DOWN])
    {
    // move backward
    if ((cam_speed-=1) < -MAX_SPEED) cam_speed = -MAX_SPEED;
    } // end if
 
 // rotate around y axis or yaw
-if (keyboard_state[DIK_RIGHT])
+if ( Key == 0x4D) //keyboard_state[DIK_RIGHT])
    {
    cam.dir.y+=5;
 
    // scroll the background
-   Scroll_Bitmap(&background_bmp, -10);
+   Scroll_Bitmap(&background_bmp, -10, 0);
    } // end if
 
-if (keyboard_state[DIK_LEFT])
-   {
-   cam.dir.y-=5;
+ if ( Key == 0x4B)//keyboard_state[DIK_LEFT])
+    {
+     cam.dir.y-=5;
 
    // scroll the background
-   Scroll_Bitmap(&background_bmp, 10);
-   } // end if
+     Scroll_Bitmap(&background_bmp, 10, 0);
+    } // end if
 
-*/
+}
 // scroll sky slowly
 Scroll_Bitmap(&background_bmp, -1, 0);
 

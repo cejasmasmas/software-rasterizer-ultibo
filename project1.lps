@@ -9,8 +9,8 @@
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="39"/>
-        <CursorPos X="5" Y="59"/>
+        <TopLine Value="42"/>
+        <CursorPos Y="58"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -18,11 +18,10 @@
         <Filename Value="keyboardthread.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="KeyboardThread"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="11" Y="22"/>
         <UsageCount Value="22"/>
-        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="C:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo\core\framebuffer.pas"/>
@@ -49,7 +48,7 @@
         <UsageCount Value="12"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="3" HistoryIndex="2">
       <Position1>
         <Filename Value="project1.lpr"/>
         <Caret Line="128" Column="87" TopLine="93"/>
@@ -58,6 +57,10 @@
         <Filename Value="project1.lpr"/>
         <Caret Line="28"/>
       </Position2>
+      <Position3>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="78" Column="58" TopLine="59"/>
+      </Position3>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

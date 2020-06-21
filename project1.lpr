@@ -24,8 +24,7 @@ uses
   Syscalls;
    }
 RaspberryPi3, GlobalConst, GlobalTypes, GlobalConfig, Platform, HeapManager,
-Console, SysUtils, Threads, VC4, Syscalls, Mouse, keyboard, DWCOTG, Framebuffer,
-KeyboardThread;
+Console, SysUtils, Threads, VC4, Syscalls, Mouse, keyboard, DWCOTG, Framebuffer;
 
 {$linklib Testnanogl}
 {$linklib t3dlib1}
@@ -56,8 +55,7 @@ var
 
 
   GfxWidth, GfxHeight   : Integer;
-  //Handle:THandle;
-  Thread1Handle:TThreadHandle;
+
 
 
 
@@ -76,6 +74,23 @@ var
   begin
      Result := BufferStart;
   end;
+
+  procedure getKey(var value : integer); export; cdecl;
+var
+  Key: Char;
+begin
+  // Check if a key is available (without waiting)
+  if ConsolePeekKey(Key, nil) then
+  begin
+    // Remove the key from the buffer
+    ConsoleGetKey(Key, nil);
+
+    // Return the ordinal value of the character
+    value := Ord(Key);
+  end
+  else
+    value := -1;
+end;
 
 
 
@@ -117,17 +132,7 @@ begin
   CurrentPage := 0;
   //Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
 
-  Thread1Handle:=BeginThread(@Thread1Execute,nil,Thread1Handle,THREAD_STACK_DEFAULT_SIZE);
-  if Thread1Handle = INVALID_HANDLE_VALUE then
-    begin
-     {If the thread handle is not valid then BeginThread failed}
-     {Failed to create Thread1 nothing will be shown)}
-    end
-   else
-    begin
-      //Handle:=ConsoleWindowCreate(ConsoleDeviceGetDefault,CONSOLE_POSITION_FULL,True);
-      test; {main thread}
-    end;
+  test; {main thread}
 
   ThreadHalt(0);
 end.
