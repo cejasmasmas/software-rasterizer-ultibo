@@ -177,6 +177,8 @@ UCHAR* dest_buffer;
 
 BITMAP_IMAGE background_bmp;
 
+
+
 int test()
 {
   getScreenSize(&ScreenWidth, &ScreenHeight);  
