@@ -25,8 +25,8 @@ following keys have delay (press longer)
 
 - up forward
 - down backward
--left left
--right right
+- left turn left
+- right turn right
 
 If you want to recompile you will need ultibo framework and also
 the arm-none-eabi tool chain, I would recommend heading to www.ultibo.org
