@@ -3187,7 +3187,7 @@ else
    } // end else
 } // end scroll on x-axis
 
-
+Destroy_Bitmap(&temp_image);
 // return success
 return(1);
 
