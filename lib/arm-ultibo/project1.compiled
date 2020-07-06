@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc.exe" Date="1210472906"/>
-  <Params Value=" -Tultibo -Parm -CpARMV7A -WpRPI3B @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG -MObjFPC -Scghi -CX -O2 -XX -l -vewnhibq -FiC:\ArmCompiler\framebufferRPI3\lib\arm-ultibo -FuC:\ArmCompiler\framebufferRPI3\ -FUC:\ArmCompiler\framebufferRPI3\lib\arm-ultibo\ project1.lpr"/>
-</CONFIG>
