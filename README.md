@@ -7,7 +7,7 @@ to C so it can compile and work with the baremetal framework Ultibo
 the idea is to have all the book examples working so in each folder you
 will find a zip file which is the kernel image and the files needed to
 run the demo, for example the folder ultibo_t3del15 has a zip file called
-ultibo_t3del15_image.zip extract and copy all files to SD cards root
+ultibo_t3del15_image.zip extract and copy all files to SD card root
 and boot your raspberry pi 3, right now I've only tested on pi 3 the 
 following should work for most of the examples, the screenshots folder
 should give you what to expect for each demo
