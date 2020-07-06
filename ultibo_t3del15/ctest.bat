@@ -5,5 +5,5 @@ REM following copied from https://github.com/noshbar/Ultibo-PCE/blob/master/Ulti
 del kernel7.img
 del *.o
 del *.ppu
-c:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc -B -Tultibo -Parm -CpARMV7A -WpRPI3B @c:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG -O2 -dPLATFORM_PI3 ultibo_raiders3D.lpr
+c:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc -B -Tultibo -Parm -CpARMV7A -WpRPI3B @c:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG -O2 -dPLATFORM_PI3 demoII15_1.lpr
 echo Done.
